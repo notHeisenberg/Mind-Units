@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="530.0" prefWidth="666.0" style="-fx-background-color: #ead1dc;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.project.mindunits.DesignpageController">
+    <children>
+        <Label layoutX="196.0" layoutY="23.0" text="Design New Car Model">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="207.0" layoutY="64.0" text="To design new car model click here" />
+        <Label layoutX="86.0" layoutY="82.0" />
+        <Hyperlink layoutX="56.0" layoutY="88.0" text="https://www.carbodydesign.com/directory/car-design/car-design-software/#google_vignette" />
+        <Label layoutX="72.0" layoutY="140.0" text="Model Name:" />
+        <Label layoutX="108.0" layoutY="172.0" text="Date:" />
+        <Label layoutX="297.0" layoutY="140.0" text="Design Link:" />
+        <Button layoutX="303.0" layoutY="178.0" mnemonicParsing="false" onAction="#insertModelButtonOnClick" text="Insert Model" />
+        <TableView fx:id="carModelTableView" layoutX="86.0" layoutY="244.0" prefHeight="200.0" prefWidth="226.0">
+            <columns>
+                <TableColumn fx:id="carModelCol" prefWidth="75.0" text="Car Model" />
+                <TableColumn fx:id="designDateCol" prefWidth="75.0" text="Design Date" />
+                <TableColumn fx:id="designLinkCol" prefWidth="75.0" text="Design Link" />
+            </columns>
+        </TableView>
+        <TextField fx:id="modelNameTextField" layoutX="150.0" layoutY="136.0" prefHeight="26.0" prefWidth="114.0" />
+        <TextField fx:id="designLinkTextField" layoutX="369.0" layoutY="136.0" prefHeight="26.0" prefWidth="114.0" />
+        <DatePicker fx:id="dateDatepicker" layoutX="154.0" layoutY="168.0" prefHeight="26.0" prefWidth="106.0" />
+        <Button layoutX="484.0" layoutY="461.0" mnemonicParsing="false" onAction="#saveProgressButtonOnClick" text="Save Progress" />
+    </children>
+</AnchorPane>
+

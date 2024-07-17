@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="523.0" prefWidth="600.0" style="-fx-background-color: #fff2cc;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oop.project.mindunits.ConductSimulationController">
+    <children>
+        <Label layoutX="216.0" layoutY="40.0" text="Conduct Simulation">
+            <font>
+                <Font name="System Bold Italic" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="92.0" layoutY="94.0" text="Select Car Model:" />
+        <Label layoutX="120.0" layoutY="135.0" text="Speed:" />
+        <Label layoutX="119.0" layoutY="170.0" text="Weight:" />
+        <Label layoutX="346.0" layoutY="121.0" text="Additional:" />
+        <ComboBox fx:id="selectCarComboBox" layoutX="187.0" layoutY="89.0" prefHeight="26.0" prefWidth="102.0" />
+        <TextField fx:id="speedTextField" layoutX="187.0" layoutY="130.0" prefHeight="26.0" prefWidth="102.0" />
+        <TextField fx:id="weightTextField" layoutX="187.0" layoutY="166.0" prefHeight="26.0" prefWidth="102.0" />
+        <TextField fx:id="aeroDynamicsTextField" layoutX="187.0" layoutY="208.0" prefHeight="26.0" prefWidth="102.0" />
+        <Label layoutX="347.0" layoutY="94.0" text="Type:" />
+        <RadioButton fx:id="crashTestRadioButton" layoutX="383.0" layoutY="94.0" mnemonicParsing="false" text="Crash Test" />
+        <RadioButton fx:id="performanceTestRadioButton" layoutX="478.0" layoutY="94.0" mnemonicParsing="false" text="Performance Test" />
+        <CheckBox fx:id="weatherCheckBox" layoutX="384.0" layoutY="147.0" mnemonicParsing="false" text="Weather Condition" />
+        <CheckBox fx:id="nightCheckBox" layoutX="385.0" layoutY="179.0" mnemonicParsing="false" text="Night Mode" />
+        <Button layoutX="376.0" layoutY="224.0" mnemonicParsing="false" onAction="#runButtonOnClick" text="Run Simulation" />
+        <Label layoutX="104.0" layoutY="213.0" text="Aerodynamics:" />
+        <TableView fx:id="runSimulationTableView" layoutX="33.0" layoutY="278.0" prefHeight="200.0" prefWidth="454.0">
+            <columns>
+                <TableColumn fx:id="carModelCol" prefWidth="75.0" text="Car Model" />
+                <TableColumn fx:id="speedCol" prefWidth="75.0" text="speed" />
+                <TableColumn fx:id="weightCol" prefWidth="75.0" text="Weight" />
+                <TableColumn fx:id="aeroCol" prefWidth="75.0" text="Aerodynamics" />
+                <TableColumn fx:id="typeCol" prefWidth="75.0" text="Type" />
+                <TableColumn fx:id="additionalCol" prefWidth="75.0" text="Additional" />
+            </columns>
+        </TableView>
+        <Button layoutX="473.0" layoutY="483.0" mnemonicParsing="false" onAction="#exportButtonOnClick" text="Export Result" />
+    </children>
+</AnchorPane>
